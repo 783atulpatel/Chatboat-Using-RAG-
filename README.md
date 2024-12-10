@@ -52,35 +52,35 @@ This intelligent assistant leverages Retrieval-Augmented Generation (RAG) to pro
 
 ### **1. Clone the Repository**
 
--git clone https://github.com/783atulpatel/Domain-AI-Assistant.git
--cd Domain-AI-Assistant
+- git clone https://github.com/783atulpatel/Domain-AI-Assistant.git
+- cd Domain-AI-Assistant
 
 ## **Setup and Usage Instructions**
 
 ### **1. Install Dependencies**
--Install the required Python libraries:
-pip install -r requirements.txt
+- Install the required Python libraries:
+- pip install -r requirements.txt
 
 ### **2. Configure API Keys**
--Obtain the Gemini API key from Google AI Studio.
--Place the credentials.json file in the project directory.
--Set the GOOGLE_APPLICATION_CREDENTIALS environment variable:
+- Obtain the Gemini API key from Google AI Studio.
+- Place the credentials.json file in the project directory.
+- Set the GOOGLE_APPLICATION_CREDENTIALS environment variable:
 
-export GOOGLE_APPLICATION_CREDENTIALS=/path/to/credentials.json
+- export GOOGLE_APPLICATION_CREDENTIALS=/path/to/credentials.json
 
 
 ### **3. Prepare Vectorized Data**
--Run the vectorization script to process domain-specific documents:
+- Run the vectorization script to process domain-specific documents:
 
-python vectorize.py
+- python vectorize.py
 
 ### **4. Launch the Assistant**
--Start the Streamlit app to interact with the assistant:
+- Start the Streamlit app to interact with the assistant:
 
-streamlit run main.py
+- streamlit run main.py
 
 ## **Sample Use Cases**
--Medical Domain: Train the assistant with medical guidelines and provide instant answers to health-related queries.
--Financial Domain: Offer financial insights based on policies and market data.
--Education: Support students and faculty with course-related information and academic schedules.
+- Medical Domain: Train the assistant with medical guidelines and provide instant answers to health-related queries.
+- Financial Domain: Offer financial insights based on policies and market data.
+- Education: Support students and faculty with course-related information and academic schedules.
 
