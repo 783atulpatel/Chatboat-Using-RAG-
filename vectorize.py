@@ -9,12 +9,12 @@ import google.generativeai as genai
 
 
 load_dotenv()
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Users/harshitawork/Documents/new-project/credentials.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/credentials.json'
 genai.configure()
 # genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 
-loader = DirectoryLoader(path="/Users/harshitawork/Documents/new-project/data", glob = "./*.txt", loader_cls =TextLoader)
+loader = DirectoryLoader(path="/data", glob = "./*.txt", loader_cls =TextLoader)
 
 documents = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=1024, chunk_overlap=500)
@@ -28,7 +28,7 @@ vectordb = Chroma.from_documents(
 
 print("Documents vectorized !!")
 
-query = "when is Riviera 2025?"
+query = "your question// when is rivera/?"
 matched_docs = vectordb.similarity_search(query)
 for ind, doc in enumerate(matched_docs):
     print(f"------------- Document {ind}: \n Context: \n {doc.page_content}")
